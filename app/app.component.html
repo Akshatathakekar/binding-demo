@@ -1,0 +1,66 @@
+<head>
+  <style>
+    .invalid{
+      border: 1px solid red;
+     
+    }
+   .disable
+   {
+     opacity: 0;
+   }
+  </style>
+
+</head>
+  
+
+<h2>{{title}}</h2>
+<br>
+<button type="button" (click)="performAction()"id="a">Click Me</button>
+
+ 
+
+
+<br><br>
+
+<!-- style='width:60px;overflow: hidden; -->
+<div [style.width.px]="starWidth" [style.overflow]=" 'hidden' ">
+  <div style='width:75px' [style.color]="starColor"> 
+    <span class="fa fa-star" ></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+  </div>
+
+</div>
+
+<br>
+<br>
+<label>Enter Name</label>
+<input type="text" name="username" required [class.invalid]="true"/>
+
+<br><br>
+
+<br>
+<label> Name</label>
+<input type="text" name="username" required [class.d-none]="true"/>
+
+<br><br>
+
+<br>
+<label> Name</label>
+<input type="text" name="username" [attr.value]="customerName"/>
+
+<br><br>
+
+<div [innerHTML]="title">
+
+</div>
+
+<br><br>
+<label>
+  Enter username
+</label>
+<input type="text" name="customer_name" [(ngModel)]="customerName"/>
+<br>
+{{customerName}}
